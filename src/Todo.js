@@ -6,7 +6,7 @@ export const Todo = ({ todo, onRemove }) => {
 
     return (
         <TouchableOpacity activOpacity={0.5} onPress={() =>{
-            console.log('Pressed', todo.id)
+
         }}
         onLongPress={onRemove.bind(null, todo.id)}
         >
