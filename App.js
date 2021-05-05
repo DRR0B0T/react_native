@@ -7,6 +7,14 @@ export default function App() {
     const [todos, setTodos] = useState([])
 
      const addTodo = title => {
+         setTodos(prev => [
+             ...prev,
+             {
+                 id: Date.now().toString(),
+                 title
+             }
+         ])
+
     //     const newTodo = {
     //         id: Date.now().toString(),
     //         title
@@ -19,14 +27,6 @@ export default function App() {
         //         newTodo
         //     ]
         // })
-
-        setTodos(prev => [
-            ...prev,
-            {
-            id: Date.now().toString(),
-            title
-        }
-        ])
     }
 
     return (
